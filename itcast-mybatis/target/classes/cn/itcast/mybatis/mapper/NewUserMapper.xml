@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.mybatis.mapper.NewUserMapper">
+
+	<!-- 分页查询数据 -->
+	<!-- 一条是start，从那一条数据开始查，第二条是rows，每页显示的数据条数 -->
+	<select id="queryUserByPage" resultType="user">
+		SELECT * FROM `user`
+		LIMIT #{page},#{rows}
+	</select>
+
+</mapper>
